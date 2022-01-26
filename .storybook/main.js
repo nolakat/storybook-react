@@ -11,4 +11,11 @@ module.exports = {
       },
     },
   ],
+  refs: {
+    'design-system': {
+      title: "Vue Components",
+      url: "https://sb-test-vue.netlify.app/",
+      expanded: false // optional, true by default
+    }
+   }
 };
