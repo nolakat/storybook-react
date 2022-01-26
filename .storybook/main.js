@@ -11,11 +11,21 @@ module.exports = {
       },
     },
   ],
-  refs: {
-    'design-system': {
-      title: "Vue Components",
-      url: "https://sb-test-vue.netlify.app/",
-      expanded: false // optional, true by default
+   // 👇 Retrieve the current environment from the configType argument
+   refs: (config, { configType }) => {
+    if (configType === 'DEVELOPMENT') {
+      return {
+        vue: {
+          title: 'Vue Storybook - Dev',
+          url: 'http://localhost:7007',
+        }
+      };
     }
-   }
+    return {
+      vue: {
+        title: 'Vue Storybook - Prod',
+        url: 'https://sb-test-vue.netlify.app',
+      }
+    };
+  },
 };
