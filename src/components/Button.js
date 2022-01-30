@@ -9,14 +9,15 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   return (
     <button
       type="button"
-      className={['storybook-button',`text-xl`, `text-red-500`, `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
+      className={'bg-transparent font-medium border-2 border-white text-tiny text-white py-3 px-7.5 rounded-sm hover:bg-black hover:text-white hover:border-black ease-in duration-300'}
       {...props}
     >
       {label}
     </button>
   );
 };
+
+
 
 Button.propTypes = {
   /**
